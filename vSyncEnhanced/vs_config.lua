@@ -8,9 +8,11 @@ Config.Permissions = {
     time = {
         freeze = 'vSync.time.freeze',
         change = 'vSync.time.change',
-        morning = 'vSync.time.morning',
-        noon = 'vSync.time.noon',
-        evening = 'vSync.time.evening',
-        night = 'vSync.time.night',
+        presets = {
+            morning = 'vSync.time.morning',
+            noon = 'vSync.time.noon',
+            evening = 'vSync.time.evening',
+            night = 'vSync.time.night',
+        },
     },
 }

@@ -15,12 +15,12 @@
 - Easy to use ace permissions for the commands.
 
 # Commands
-`/weather <type>` Change the weather type (will fade to the new weather type within 15 seconds).
-`/freezeweather` Enable/disable dynamic weather changes.
-`/time <h> <m>` Set the time.
-`/freezetime` Freeze/unfreeze time.
-`/morning` Set the time to morning.
-`/noon` Set the time to noon.
-`/evening` Set the time to evening.
-`/night` Set the time to night.
+`/weather <type>` Change the weather type (will fade to the new weather type within 15 seconds). <br />
+`/freezeweather` Enable/disable dynamic weather changes. <br />
+`/time <h> <m>` Set the time. <br />
+`/freezetime` Freeze/unfreeze time. <br />
+`/morning` Set the time to morning. <br />
+`/noon` Set the time to noon. <br />
+`/evening` Set the time to evening. <br />
+`/night` Set the time to night. <br />
 `/blackout` Enable/disable blackout mode.

@@ -38,7 +38,7 @@ end)
 
 RegisterCommand('freezetime', function(source, args)
     if source ~= 0 then
-        if IsPlayerAceAllowed(source, "vSync.time.freeze") then
+        if IsPlayerAceAllowed(source, Config.Permissions.time.freeze) then
             freezeTime = not freezeTime
             if freezeTime then
                 TriggerClientEvent('vSync:notify', source, 'Time is now ~b~frozen~s~.')
@@ -60,7 +60,7 @@ end)
 
 RegisterCommand('freezeweather', function(source, args)
     if source ~= 0 then
-        if IsPlayerAceAllowed(source, "vSync.weather.freeze") then
+        if IsPlayerAceAllowed(source, Config.Permissions.weather.freeze) then
             DynamicWeather = not DynamicWeather
             if not DynamicWeather then
                 TriggerClientEvent('vSync:notify', source, 'Dynamic weather changes are now ~r~disabled~s~.')
@@ -102,7 +102,7 @@ RegisterCommand('weather', function(source, args)
             end
         end
     else
-        if IsPlayerAceAllowed(source, "vSync.weather.change") then
+        if IsPlayerAceAllowed(source, Config.Permissions.weather.change) then
             local validWeatherType = false
             if args[1] == nil then
                 TriggerClientEvent('chatMessage', source, '', {255,255,255}, '^8Error: ^1Invalid syntax, use ^0/weather <weatherType> ^1instead!')
@@ -137,7 +137,7 @@ RegisterCommand('blackout', function(source)
             print("Blackout is now disabled.")
         end
     else
-        if IsPlayerAceAllowed(source, "vSync.blackout") then
+        if IsPlayerAceAllowed(source, Config.Permissions.blackout) then
             blackout = not blackout
             if blackout then
                 TriggerClientEvent('vSync:notify', source, 'Blackout is now ~b~enabled~s~.')
@@ -154,7 +154,7 @@ RegisterCommand('morning', function(source)
         print("For console, use the \"/time <hh> <mm>\" command instead!")
         return
     end
-    if IsPlayerAceAllowed(source, "vSync.time.presets.morning") then
+    if IsPlayerAceAllowed(source, Config.Permissions.time.presets.morning) then
         ShiftToMinute(0)
         ShiftToHour(9)
         TriggerClientEvent('vSync:notify', source, 'Time set to ~y~morning~s~.')
@@ -167,7 +167,7 @@ RegisterCommand('noon', function(source)
         print("For console, use the \"/time <hh> <mm>\" command instead!")
         return
     end
-    if IsPlayerAceAllowed(source, "vSync.time.presets.noon") then
+    if IsPlayerAceAllowed(source, Config.Permissions.time.presets.noon) then
         ShiftToMinute(0)
         ShiftToHour(12)
         TriggerClientEvent('vSync:notify', source, 'Time set to ~y~noon~s~.')
@@ -180,7 +180,7 @@ RegisterCommand('evening', function(source)
         print("For console, use the \"/time <hh> <mm>\" command instead!")
         return
     end
-    if IsPlayerAceAllowed(source, "vSync.time.presets.evening") then
+    if IsPlayerAceAllowed(source, Config.Permissions.time.presets.evening) then
         ShiftToMinute(0)
         ShiftToHour(18)
         TriggerClientEvent('vSync:notify', source, 'Time set to ~y~evening~s~.')
@@ -193,7 +193,7 @@ RegisterCommand('night', function(source)
         print("For console, use the \"/time <hh> <mm>\" command instead!")
         return
     end
-    if IsPlayerAceAllowed(source, "vSync.time.presets.night") then
+    if IsPlayerAceAllowed(source, Config.Permissions.time.presets.night) then
         ShiftToMinute(0)
         ShiftToHour(23)
         TriggerClientEvent('vSync:notify', source, 'Time set to ~y~night~s~.')
@@ -230,7 +230,7 @@ RegisterCommand('time', function(source, args, rawCommand)
             print("Invalid syntax, correct syntax is: time <hour> <minute> !")
         end
     elseif source ~= 0 then
-        if IsPlayerAceAllowed(source, "vSync.time.change") then
+        if IsPlayerAceAllowed(source, Config.Permissions.time.change) then
             if tonumber(args[1]) ~= nil and tonumber(args[2]) ~= nil then
                 local argh = tonumber(args[1])
                 local argm = tonumber(args[2])

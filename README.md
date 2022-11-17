@@ -2,7 +2,7 @@
 
 ### Simple weather and time sync script for FiveM.
 
-**Current version:** 1.0
+**Current version:** 1.1.1
 **Author:** JayG2 (following Vespura)
 **Last update:** 12-11-2022
 
